@@ -1,1 +1,2 @@
 php documents -> dá um padrão de como documentar os seus códigos
+Minuto parado: 13minutos.
