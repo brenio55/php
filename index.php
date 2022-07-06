@@ -1,14 +1,11 @@
 <?php
-  $nome1 = "João";
-  $sobrenome = "Rangel";
-  $nomeCompleto = $nome1 . " " . $sobrenome;
-  echo $nomeCompleto;
+  $nome = (int)$_GET["a"];
 
-  exit; // -> para a execução do código
+  $ip = $_SERVER["REMOTE_ADDR"];
+
+  echo $ip;
 
   echo "<br>";
 
-  unset($nome1); //exclui uma variável da memória
-
-  echo $nome1;
+  var_dump($nome);
 ?>
