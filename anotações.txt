@@ -1,1 +1,21 @@
-para usar uma variável que foi definida dentro do escopo global, é adicionado o nome "global [variável]" antes de sua usabilidade.
+Exponenciação em PHP é usado ** ao invés de ^, ou a função pow(1, 2);
+
+Operador especial do PHP Spaceship
+
+verificação de valores.
+var_dump($a <=> $B);
+
+se $a for maior, a função retorna 1.
+Se os dois forem iguais, a função retorna 0.
+Se $b for maior que $a, a função retorna -1.
+
+Operador de verificação de valor nulo: ??.
+
+echo "$a ?? $b ?? $c ?? vazio." -> se $a for nulo, mostre-me $b, etc...
+
+if inline além do operador ternário para boolean:
+
+$resultado = (10 + 3) / 2 >   5  &&    10 + 5 < 3
+                       if >      and       if <
+
+                 
