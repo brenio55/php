@@ -1,11 +1,18 @@
 <?php
-  $nome = (int)$_GET["a"];
+  $nome = "Gláucio";
 
-  $ip = $_SERVER["REMOTE_ADDR"];
+  function teste(){
+    global $nome;
+    echo $nome;
+    echo "<br>";
+  } 
 
-  echo $ip;
+  function teste2(){
+    $nome = "Glauciano";
+    echo $nome;
+    echo "<br>";
+  }
 
-  echo "<br>";
-
-  var_dump($nome);
+  teste();
+  teste2();
 ?>

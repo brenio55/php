@@ -1,10 +1,1 @@
-Variáveis globais e variáveis de ambiente
-?variaveis = são chamadas de query string
-
---> todas as variáveis que vierem por GET ou POST virão em formato de string;.
-
-$nome = (int)$_GET["a"]; ->> muda o tipo da variável para inteiro
-
-A divisão das partes da URL é chamada de URI. (Uniform Resource Identifier, ou Identificador Uniforme de Recursos)
-
-  $ip = $_SERVER["REMOTE_ADDR"]; -> este comando pega o IP do usuário atual
+para usar uma variável que foi definida dentro do escopo global, é adicionado o nome "global [variável]" antes de sua usabilidade.
