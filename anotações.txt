@@ -1,21 +1,15 @@
-Exponenciação em PHP é usado ** ao invés de ^, ou a função pow(1, 2);
+strtoupper([variável]) -> põe a variável para maiúsculo;
 
-Operador especial do PHP Spaceship
+strtolower([variável]) -> põe a variável para minúsculo;
 
-verificação de valores.
-var_dump($a <=> $B);
+ucwords([variável]) -> põe as primeiras letras das palavras em maiúsculo;
 
-se $a for maior, a função retorna 1.
-Se os dois forem iguais, a função retorna 0.
-Se $b for maior que $a, a função retorna -1.
+ucfirst([variável]) -> põe só a primeira letra das palavras inteiras em maiúsculo;
 
-Operador de verificação de valor nulo: ??.
+str_replace(valor que se quer trocar, valor que se quer adicionar, $variável)
 
-echo "$a ?? $b ?? $c ?? vazio." -> se $a for nulo, mostre-me $b, etc...
+str_pos(variável, "valor requerido") -> retorna a posição na string do texto requerido.
 
-if inline além do operador ternário para boolean:
+substr(variável, posição, posição final) -> corta string.
 
-$resultado = (10 + 3) / 2 >   5  &&    10 + 5 < 3
-                       if >      and       if <
-
-                 
+strlen(variável) -> retorna o tamanho da variável
