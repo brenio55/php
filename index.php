@@ -1,6 +1,14 @@
 <?php
+  $nome1 = "João";
+  $sobrenome = "Rangel";
+  $nomeCompleto = $nome1 . " " . $sobrenome;
+  echo $nomeCompleto;
 
-  $nome = "Hcode";
-  echo "$nome";
+  exit; // -> para a execução do código
 
+  echo "<br>";
+
+  unset($nome1); //exclui uma variável da memória
+
+  echo $nome1;
 ?>
