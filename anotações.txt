@@ -1,1 +1,0 @@
-O padrão método de envio de informações é GET.
