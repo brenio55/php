@@ -1,4 +1,4 @@
-função para conseguir o último elemento de um determinado array: echo end($array[Dimen1]);
-adicionar nova entrada em dimensão na última posição desta dimensão: array_push($array, valor)
+JSON -> Javascript Object Notation
 
-função para mostrar um array: print_r($array[dimen--opcional])
+Anotação criada para Javascript, mas que tomou todas as linguagens, criando uma interoperabilidade de sistemas.
+
