@@ -1,4 +1,3 @@
 JSON -> Javascript Object Notation
 
 Anotação criada para Javascript, mas que tomou todas as linguagens, criando uma interoperabilidade de sistemas.
-
