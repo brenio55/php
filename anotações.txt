@@ -1,3 +1,5 @@
-JSON -> Javascript Object Notation
+Constantes podem ser chaamdas pela função define('nome', 'valor').
 
-Anotação criada para Javascript, mas que tomou todas as linguagens, criando uma interoperabilidade de sistemas.
+É possível criar arrays constantes em PHP.
+
+É conveção usar letras maiúsculas para constantes

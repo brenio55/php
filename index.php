@@ -1,6 +1,5 @@
 <?php 
-    $json = '[{"nome":"Jo\u00e3o","idade":20},{"nome":"Glaucio","idade":25}]';
+    define('SERVIDOR', '127.0.0.1');
 
-    $data = json_decode($json);
-    var_dump($data);
+    echo SERVIDOR;
 ?>
