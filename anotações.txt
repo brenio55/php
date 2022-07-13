@@ -1,1 +1,4 @@
 função para conseguir o último elemento de um determinado array: echo end($array[Dimen1]);
+adicionar nova entrada em dimensão na última posição desta dimensão: array_push($array, valor)
+
+função para mostrar um array: print_r($array[dimen--opcional])
