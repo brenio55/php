@@ -3,3 +3,8 @@ Constantes podem ser chaamdas pela função define('nome', 'valor').
 É possível criar arrays constantes em PHP.
 
 É conveção usar letras maiúsculas para constantes
+
+O PHP contém algumas constantes padrões:
+    PHP_VERSION;
+    DIRECTORY_SEPARATOR -> Mostra a barra de diretório padrão do S.O. do Servidor;
+    
