@@ -1,10 +1,14 @@
-Constantes podem ser chaamdas pela função define('nome', 'valor').
+As variáveis de sessão são semelhantes às Superglobais.
+São acessíveis em todo código enquanto o USER está online.
 
-É possível criar arrays constantes em PHP.
+Quando o usuário acessa a internet, uma sessão é criada entre o USER e o SERVER.
+A sessão dura em média 20 minutos.
 
-É conveção usar letras maiúsculas para constantes
+session_start(); inicializa as variáveis de sessões.
 
-O PHP contém algumas constantes padrões:
-    PHP_VERSION;
-    DIRECTORY_SEPARATOR -> Mostra a barra de diretório padrão do S.O. do Servidor;
-    
+Usa-se as variáveis desta forma:
+
+$_SESSION['nome da variavel'] = value;
+
+session_unset('variável') => Limpa a variável;
+session_destroy() => destroi o usuário
