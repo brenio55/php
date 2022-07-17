@@ -12,3 +12,16 @@ $_SESSION['nome da variavel'] = value;
 
 session_unset('variável') => Limpa a variável;
 session_destroy() => destroi o usuário
+
+--- ID de Sessão --
+
+Quando você entra num SERVER, você ganha um ID de Sessão, para que o servidor identifique seu computador.
+
+o ID pode ser identificaod com o comando session_id();
+session_regenerate_id(); => Gera um novo ID de Sessão.
+
+É muito importante que se esconda o ID a todo custo, pois se um hacker conseguir o ID de sessão de outra pessoa, ele pode roubar os dados.
+
+É chamado isto de Session Hijack
+
+É interessante mudar a sessão do usuário na parte de validação de dados no login

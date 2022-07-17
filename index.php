@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    $_SESSION['nome'] = 'Brenio';
+    echo session_id();
 
-    echo "<a href='novoArq.php'>Ver seu nome</a>";
+    echo "<a href='novoReg.php'>Gerar novo registro</a>";
 ?>
