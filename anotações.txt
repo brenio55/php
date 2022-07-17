@@ -1,6 +1,8 @@
 As variáveis de sessão são semelhantes às Superglobais.
 São acessíveis em todo código enquanto o USER está online.
 
+Quando nós entramos num site, o servidor cria um arquivo temporário dentro do PC, com as informações de sessão.
+
 Quando o usuário acessa a internet, uma sessão é criada entre o USER e o SERVER.
 A sessão dura em média 20 minutos.
 
@@ -25,3 +27,7 @@ session_regenerate_id(); => Gera um novo ID de Sessão.
 É chamado isto de Session Hijack
 
 É interessante mudar a sessão do usuário na parte de validação de dados no login
+
+-- Funções de sessão --
+
+Para mostrar o arquivo temporário de sessão no PC, usamos session_save_path();
