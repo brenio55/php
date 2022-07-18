@@ -1,10 +1,13 @@
 <?php 
-    define('BANCO_DE_DADOS', [
-        '127.0.0.1',
-        'root',
-        'password',
-        'txt'
-    ]); // caso quisesse que ela fosse case sensitive, ao final do colchete, adicionava-se um parametro true;
+   $a = 10;
 
-    print_r(BANCO_DE_DADOS);
+function trocaValor(&$b){
+    $b += 50;
+    return $b;
+}
+
+echo trocaValor($a);
+echo "<br>";
+echo $a; //$a troca para 60, pois o valor foi alterado para o endereço de memória citado. 
+// isto se chama parâmetro passado por referência.
 ?>

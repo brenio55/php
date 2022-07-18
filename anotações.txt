@@ -8,3 +8,15 @@ O PHP contém algumas constantes padrões:
     PHP_VERSION;
     DIRECTORY_SEPARATOR -> Mostra a barra de diretório padrão do S.O. do Servidor;
     
+Para passar um parâmetro por referência, utiliza-se o símbolo de e-comercial, assim o valor que está armazenado no endereço de memória passado no parâmetro será usado, ao invés de se usar a variável padrão interna da função.
+
+
+
+exemplo: 
+$a = 10;
+function trocaValor(&$b){
+    $b += 50;
+    return $b;
+}
+
+trocaValor($a); // resultado: 60
