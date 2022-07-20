@@ -1,22 +1,16 @@
-Constantes podem ser chaamdas pela função define('nome', 'valor').
+Novas funcionalidades do PHP
 
-É possível criar arrays constantes em PHP.
+Conseguimos passar valores indefinidademente para uma função desta maneira:
 
-É conveção usar letras maiúsculas para constantes
+function (int ...$valores) // desta forma podemos passar valores de maneira indefinida e lidar com eles dentro da função. Demonstrado no exemplo 1
 
-O PHP contém algumas constantes padrões:
-    PHP_VERSION;
-    DIRECTORY_SEPARATOR -> Mostra a barra de diretório padrão do S.O. do Servidor;
-    
-Para passar um parâmetro por referência, utiliza-se o símbolo de e-comercial, assim o valor que está armazenado no endereço de memória passado no parâmetro será usado, ao invés de se usar a variável padrão interna da função.
+Os valores passados serão retornados em forma de array;
 
+-- pode-se retornar um dado de outra forma do dado original por meio de retorno de função
+Par afazemos isso, adicionamos o código da seguinte forma:
 
+function (int ...$valores):string { //desta forma o conteúdo retornado será uma string.
 
-exemplo: 
-$a = 10;
-function trocaValor(&$b){
-    $b += 50;
-    return $b;
+Demosntrado no exemplo 2;
+
 }
-
-trocaValor($a); // resultado: 60

@@ -1,13 +1,32 @@
 <?php 
-   $a = 10;
+    function br(){
+        echo "<br />";
+    }
 
-function trocaValor(&$b){
-    $b += 50;
-    return $b;
-}
 
-echo trocaValor($a);
-echo "<br>";
-echo $a; //$a troca para 60, pois o valor foi alterado para o endereço de memória citado. 
-// isto se chama parâmetro passado por referência.
+    function ex1(){
+        function soma(int ...$valores){
+            return array_sum($valores);
+        }
+
+        echo soma(2, 2);
+        br();
+        echo soma (2, 4);
+        br();
+    }
+
+    function ex2(){
+        function soma2(int ...$valores):string {
+            return array_sum($valores);
+        }
+
+        echo soma2(2, 2);
+        br();
+        echo soma2(2, 4);
+        br();
+    }
+
+    ex1();
+    br();
+    ex2();
 ?>
