@@ -1,1 +1,1 @@
-Aula 36 fala sobre funções recursivas, que são funções que se chamam a elas mesmas quando a mesma faz uma função que ela está procurando.
+Funções anônimas são funções que não têm nome nem return.
