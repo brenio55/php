@@ -1,1 +1,1 @@
-Funções anônimas são funções que não têm nome nem return.
+O marco zero dos sistemas Unix para datas começa em 1970.

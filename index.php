@@ -1,17 +1,12 @@
 <?php 
-function test($callback){
-    $callback();
-}
+    echo date("d/m/Y"); // dd/MM/YYYY
+    echo "<br>";
+    echo date("d/m/Y H:i:s"); // dd/MM/YYYY H:min:sec
 
-test(function (){
-    echo "Terminou.";
-}); //isto é uma função anônima em PHP. Também pode ser feito desta forma:
+    echo time(); //exibe a quantidade de segundos passados até hoje
+    echo "<br>";
+    $ts = strtotime('2001-09-11'); //converte string para timestamp (numero de segundos desde 1970 até agora)
 
     echo "<br>";
-
-    $fn = function($a){
-        var_dump($a);
-    };
-
-    $fn("oi");
+    echo date("l, d/m/Y", $ts);
 ?>
