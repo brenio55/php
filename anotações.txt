@@ -1,16 +1,1 @@
-Novas funcionalidades do PHP
-
-Conseguimos passar valores indefinidademente para uma função desta maneira:
-
-function (int ...$valores) // desta forma podemos passar valores de maneira indefinida e lidar com eles dentro da função. Demonstrado no exemplo 1
-
-Os valores passados serão retornados em forma de array;
-
--- pode-se retornar um dado de outra forma do dado original por meio de retorno de função
-Par afazemos isso, adicionamos o código da seguinte forma:
-
-function (int ...$valores):string { //desta forma o conteúdo retornado será uma string.
-
-Demosntrado no exemplo 2;
-
-}
+Aula 36 fala sobre funções recursivas, que são funções que se chamam a elas mesmas quando a mesma faz uma função que ela está procurando.
