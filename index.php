@@ -1,5 +1,13 @@
 <?php 
-setlocale(LC_ALL, "pt_BR", "pt_BR.utf-8", "portuguese"); // Linux, o padrão é escrito assim: pt_BR; UTF: pt_BR.utf-8; Windows: portuguese;
+$dt = new DateTime();
 
-echo strftime("%A %B"); //todas as variações podem ser encontradas na documentação. -> Esta função é sensível ao setlocale.
+$periodo = new DateInterval("P15D"); //periodo de 15 dias
+
+echo $dt->format("d/m/y h:i:s");
+
+$dt->add($periodo);
+
+echo "<br>";
+
+echo $dt->format("d/m/y h:i:s");
 ?>
