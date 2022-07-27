@@ -1,12 +1,5 @@
 <?php 
-    echo date("d/m/Y"); // dd/MM/YYYY
-    echo "<br>";
-    echo date("d/m/Y H:i:s"); // dd/MM/YYYY H:min:sec
+setlocale(LC_ALL, "pt_BR", "pt_BR.utf-8", "portuguese"); // Linux, o padrão é escrito assim: pt_BR; UTF: pt_BR.utf-8; Windows: portuguese;
 
-    echo time(); //exibe a quantidade de segundos passados até hoje
-    echo "<br>";
-    $ts = strtotime('2001-09-11'); //converte string para timestamp (numero de segundos desde 1970 até agora)
-
-    echo "<br>";
-    echo date("l, d/m/Y", $ts);
+echo strftime("%A %B"); //todas as variações podem ser encontradas na documentação. -> Esta função é sensível ao setlocale.
 ?>

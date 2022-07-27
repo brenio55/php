@@ -1,1 +1,0 @@
-O marco zero dos sistemas Unix para datas começa em 1970.
