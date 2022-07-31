@@ -1,2 +1,3 @@
 Um atributo ou método pode ser chamado sem ser representado quando ele é ESTÁTICO.
 
+A validação de CPF não está funcionando por algum motivo. //coment
