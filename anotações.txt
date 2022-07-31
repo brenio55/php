@@ -1,1 +1,3 @@
 Uma clase sempre começa com uma letra maiúscula, e as letras com nomes compostos começam com as letras inciiais com letras maiusculsa -> por convenção.
+
+Métodos começam com letras minúsculas e o resto, se composto, as iniciais em maiúsculas.

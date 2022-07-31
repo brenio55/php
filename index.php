@@ -1,17 +1,48 @@
 <?php 
-class Pessoa {
-    public $nome;
+    class Carro {
+        private $modelo;
+        private $motor;
+        private $ano;
 
-    public function falar(){
-        return "O meu nome é ".$this->nome;
+        public function getModelo(){
+            return $this->modelo;
+        }
+
+        public function setModelo($modelo){
+            $this->modelo = $modelo;
+        }
+
+        public function getMotor():float{
+            return $this->motor;
+        }
+
+        public function setMotor($motor){//o retorno deste método é float;
+            $this->motor = $motor;
+        }
+
+        public function getAno():int{ //o retorno dessa função é em inteiro;
+            return $this->ano;
+        }
+
+        public function setAno($ano){
+            $this->ano = $ano;
+        }
+
+        public function exibir(){
+            return array(
+                "modelo"=>$this->getModelo(),
+                "motor"=>$this->getMotor(),
+                "ano"=>$this->getAno()
+            );
+        }
     }
 
-    // o $this-> serve pra referenciar um atributo ou método dentro de outro método.
-    //fora da classe, pode usar normal.
-}
+    $gol = new Carro();
+    $gol->setModelo("Gol GT");
+    $gol->setMotor("1.6");
+    $gol->setAno("2017");
 
-    $glaucio = new Pessoa(); // o parêntese só é obrigatório quando se tem o método Construtor (que será explicado nas próximas aulas)
-    $glaucio->nome = "Glaucio Daniel"; //acessei o atributo nome, porque instanciei acima a classe pessoa. Logo então, adicionei a string ao atributo referente.
-
-    echo $glaucio->falar();
+    print_r($gol->exibir());
+    echo "<br>";
+    var_dump($gol->exibir());
 ?>
