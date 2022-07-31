@@ -1,3 +1,2 @@
-Uma clase sempre começa com uma letra maiúscula, e as letras com nomes compostos começam com as letras inciiais com letras maiusculsa -> por convenção.
+Um atributo ou método pode ser chamado sem ser representado quando ele é ESTÁTICO.
 
-Métodos começam com letras minúsculas e o resto, se composto, as iniciais em maiúsculas.
