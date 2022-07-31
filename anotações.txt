@@ -1,12 +1,1 @@
-Orientação a objeto é um estilo de programação.
-
-Classe é uma variável que engloba várias variáveis (cahmadas de atributos) e funções internas referentes aquele mesmo assunto. Basicamente então um conjunto de atributos e métodos.
-
-Existem atributos públicos e privados, que controlam os acessos.
-
-A função muda de nome quando estão dentro de classes, elas se chama então de método. 
-
-Um objeto é uma variável que REPRESENTA ou tira uma cópia da classe.
-
-new é o comando que serve para representar uma classe. Quando uma variável é chamada para represetnar uma classe, ela ganha o nome de iNSTÂNCIA.
-
+Uma clase sempre começa com uma letra maiúscula, e as letras com nomes compostos começam com as letras inciiais com letras maiusculsa -> por convenção.
