@@ -1,42 +1,30 @@
 <?php 
-    class Endereco {
-        private $logradouro;
-        private $numero;
-        private $cidade;
+    class Pessoa {
+        public $nome = "Rasmus Lerdorf";
+        protected $idade = 48;
+        private $senha = "123456";
 
-        public function __construct($a, $b, $c){
-            $this->logradouro = $a;
-            $this->numero = $b;
-            $this->cidade = $c;
-        }
-
-        public function __destruct(){
-            var_dump('Destruir');
-        }
-
-        public function __toString(){
-            return $this->logradouro. ", ".$this->numero. ", ".$this->cidade;
-        } //quando derem um ECHO no objeto diretamente, o método mágico to string será executado.
-
-        public function getLogradouro(){
-
-        }
-
-        public function getNumero(){
-            
-        }
-
-        public function getCidade(){
-            
+        public function verDados(){
+            echo $this->nome . "<br/>";
+            echo $this->idade . "<br/>";
+            echo $this->senha . "<br/>";
         }
     }
 
-    $meuEndereco = new Endereco('Rua Valdemar Saraiva Leão', '123', 'Santos');
+    class Programador extends Pessoa {
+        public function verDados(){
 
-    var_dump($meuEndereco);
-    echo '<br>';
-    echo $meuEndereco;
-    echo '<br>';
-    unset($meuEndereco);
-    
+            echo get_class($this) . '<br/>'; //a classe tem a representação dela mesma
+            //por meio do objeto $this.
+
+            echo $this->nome . "<br/>";
+            echo $this->idade . "<br/>";
+            echo $this->senha . "<br/>";
+        }
+    }
+
+    $objeto = new Programador();
+
+    //echo $objeto->nome;
+    $objeto->verDados();
 ?>

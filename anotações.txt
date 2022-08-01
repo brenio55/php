@@ -1,13 +1,6 @@
-Métodos mágicos
-    Métodos mágicos são métodos que acontecem de forma escondida tanto do programador quanto do usuário. Existiam até o PHP 7, 9 tipos de métodos mágicos. Os que serão principalmente estudados aqui serão os métodos CONSTRUCT, DESTRUCT E TOSTRING.
+Encapsulamento e modificadores de acesso são sinônimos.
 
-O que é o método construtor?
-    É um método normal executado automaticamente quando a classe é instanciada.
+Objetos não podem acessar métodos protected nem private.
 
-    A regra para o método ser um construtor, é ter o mesmo nome da classe. ou __construct.
-
-    Este método, é chamado de método mágico.
-
-    O método do mesmo nome da classe está em DESUSO.
-
-O método DESTRUCT é executado quando a classe é limpada da memória.
+Private -> nem herdeiros conseguem acessá-lo, apenas a própria classe.
+Protected -> pode ser acessado pelos herdeiros.
