@@ -4,3 +4,7 @@ Objetos não podem acessar métodos protected nem private.
 
 Private -> nem herdeiros conseguem acessá-lo, apenas a própria classe.
 Protected -> pode ser acessado pelos herdeiros.
+
+Abstração -> o quão genérico eu consigo fazer uma classe para que ela seja reutilizada
+
+UML ajuda na linguagem e modelagem de dados.

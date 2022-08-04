@@ -1,30 +1,29 @@
 <?php 
-    class Pessoa {
-        public $nome = "Rasmus Lerdorf";
-        protected $idade = 48;
-        private $senha = "123456";
+    class Documento {
+        private $mumero;
 
-        public function verDados(){
-            echo $this->nome . "<br/>";
-            echo $this->idade . "<br/>";
-            echo $this->senha . "<br/>";
+        public function getNumero(){
+            return $this->numero;
+        }
+
+        public function setNumero($n){
+            $this->numero = $n;
         }
     }
 
-    class Programador extends Pessoa {
-        public function verDados(){
-
-            echo get_class($this) . '<br/>'; //a classe tem a representação dela mesma
-            //por meio do objeto $this.
-
-            echo $this->nome . "<br/>";
-            echo $this->idade . "<br/>";
-            echo $this->senha . "<br/>";
+    class CPF extends Documento {
+        public function validar():bool{
+            $numeroCPF = $this->getNumero();
+            return true;
         }
     }
 
-    $objeto = new Programador();
+    $doc = new CPF;
+    $doc->setNumero("111435123-12");
+    var_dump($doc->validar());
 
-    //echo $objeto->nome;
-    $objeto->verDados();
+    echo '<br/>';
+
+    echo $doc->getNumero();
+
 ?>
