@@ -1,29 +1,22 @@
 <?php 
-    class Documento {
-        private $mumero;
+interface Veiculo {
+    public function acelerar($velocidade);
+    public function frenar($velocidade);
+    public function trocarMarcha($marcha);
+}
 
-        public function getNumero(){
-            return $this->numero;
-        }
-
-        public function setNumero($n){
-            $this->numero = $n;
-        }
+class Civic implements Veiculo {
+    public function acelerar($velocidade){
+        echo "O veículo acelerou até " . $velocidade;
     }
-
-    class CPF extends Documento {
-        public function validar():bool{
-            $numeroCPF = $this->getNumero();
-            return true;
-        }
+    public function frenar($velocidade){
+        echo "O veículo frenou até " . $velocidade;
     }
+    public function trocarMarcha($marcha){
+        echo "O veículo engatou a marcha " . $marcha;
+    }
+}
 
-    $doc = new CPF;
-    $doc->setNumero("111435123-12");
-    var_dump($doc->validar());
-
-    echo '<br/>';
-
-    echo $doc->getNumero();
+$carro = new Civic();
 
 ?>

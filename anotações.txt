@@ -1,10 +1,9 @@
-Encapsulamento e modificadores de acesso são sinônimos.
+Interface serve pra organizar o código;
 
-Objetos não podem acessar métodos protected nem private.
+É uma padronização para a execução de um código;
 
-Private -> nem herdeiros conseguem acessá-lo, apenas a própria classe.
-Protected -> pode ser acessado pelos herdeiros.
+uma interface é como se fosse um gabarito para uma classe. A interface vai ter todos os métodos que uma classe precisa ter. Caso uma classe não tenha os métodos e atributos declarados pela interface, a classe dá errado.
 
-Abstração -> o quão genérico eu consigo fazer uma classe para que ela seja reutilizada
+Uma classe pode implementar várias interfaces.
 
-UML ajuda na linguagem e modelagem de dados.
+O nome da variável não precisa ser o mesmo da interface, apenas a quantidade de parâmetros que precisa ser o mesmo e o nome das funções.
