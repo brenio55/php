@@ -1,2 +1,20 @@
-Namespace é uma ferramenta que permite agrupar as classes dentro de diretórios de uma forma organizada.
+USE dbphp7;
 
+CREATE TABLE tb_usuarios (
+	idusuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY, /* se usar auto-increment, têm de se haver prymary key */
+    deslogin VARCHAR(64) NOT NULL, /* des = descritive */
+    dessenha VARCHAR(256) NOT NULL,
+    dtcadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() /* o mysql só permite uma coluna timestamp por tabela */
+);
+
+INSERT INTO tb_usuarios (deslogin, dessenha) VALUES ('root', '!@#$');
+
+SELECT * FROM tb_usuarios;
+
+DELETE FROM tb_usuarios WHERE idusuario = 1;
+
+UPDATE tb_usuarios SET dessenha = '123456' WHERE idusuario = 1;
+
+TRUNCATE TABLE tb_usuarios;
+
+Anotações sobre a aula de MYSQL.
