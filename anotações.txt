@@ -1,9 +1,3 @@
-Interface serve pra organizar o código;
+Polimorfismo -> ter muitas formas
 
-É uma padronização para a execução de um código;
-
-uma interface é como se fosse um gabarito para uma classe. A interface vai ter todos os métodos que uma classe precisa ter. Caso uma classe não tenha os métodos e atributos declarados pela interface, a classe dá errado.
-
-Uma classe pode implementar várias interfaces.
-
-O nome da variável não precisa ser o mesmo da interface, apenas a quantidade de parâmetros que precisa ser o mesmo e o nome das funções.
+Métodos com mesmo nome, porém que tem comportamentos diferentes.

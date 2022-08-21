@@ -1,22 +1,53 @@
 <?php 
-interface Veiculo {
-    public function acelerar($velocidade);
-    public function frenar($velocidade);
-    public function trocarMarcha($marcha);
-}
 
-class Civic implements Veiculo {
-    public function acelerar($velocidade){
-        echo "O veículo acelerou até " . $velocidade;
+abstract class Animal {
+    public function falar(){
+        return "Som";
     }
-    public function frenar($velocidade){
-        echo "O veículo frenou até " . $velocidade;
-    }
-    public function trocarMarcha($marcha){
-        echo "O veículo engatou a marcha " . $marcha;
+
+    public function mover(){
+        return "Anda";
     }
 }
 
-$carro = new Civic();
+class Cachorro extends Animal {
+    public function falar(){
+        return "Late";
+    }
+}
 
+class Gato extends Animal {
+    public function falar(){
+        return "Mia";
+    }
+}
+
+class Passaro extends Animal {
+    public function falar(){
+        return "Canta";
+    }
+
+    public function mover(){
+        return "Voa e " . parent::mover(); //chama este método e o método da classe pai.
+    }
+}
+
+
+$pluto = new Cachorro();
+echo $pluto->falar() . "<br/>";
+echo $pluto->mover() . "<br/>";
+
+echo "---------------------------- <br/>";
+
+$garfield = new Gato();
+
+echo $garfield->falar() . "<br/>";
+echo $garfield->mover() . "<br/>";
+
+echo "---------------------------- <br/>";
+
+$ave = new Passaro();
+
+echo $ave->falar() . "<br/>";
+echo $ave->mover() . "<br/>";
 ?>
