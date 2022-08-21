@@ -1,11 +1,2 @@
-Polimorfismo -> ter muitas formas
+Namespace é uma ferramenta que permite agrupar as classes dentro de diretórios de uma forma organizada.
 
-Métodos com mesmo nome, porém que tem comportamentos diferentes.
-
-Para usar um autoload, criamos uma pasta chamada autoload, e então
-criamos uma função chamada function __autoload($nomeClasse){
-    require_once("$nomeClasse.php"); --> a variável $nomeclasse é detectada já automaticamente com o nome do arquivo da pasta autoload.
-}
-
-Para pesquisar subpastas dentro da pasta autoload, utilizamos a função:
-spl_autoload_register(); -> spl - standard php library
