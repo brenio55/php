@@ -11,3 +11,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 Use estas linhas de comando quando o PHP usando o MySQL não exibir a mensagem de erro e exibir o erro 500.
+
+PDO -> PHP DATA OBJECT
+É a forma mais recomendada para se trabalhar com PHP e Banco de Dados.
+
+PDO é bom para trabalhar com transação.

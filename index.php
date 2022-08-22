@@ -7,24 +7,20 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-$conn = new MySQLi("localhost", "root", "", "dbphp7"); // IP; USUÁRIO; SENHA; BANCO ESCOLHIDO
+$conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", "");//TIPO DE BANCO; IP/HOST; USUÁRIO; SENHA;
 
-if ($conn->connect_error) {
-    echo "Error: " . $conn->connect_error;
-    exit;
+$stmt = $conn->prepare("SELECT * FROM tb_usuarios ORDER BY deslogin");
+
+$stmt->execute();
+
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC); // os dois pontos são usados quando queremos acessar propriedades, métodos e constantes de nível de classe
+
+foreach($results as $row) {
+    foreach($row as $key => $value){
+        echo "<strong>".$key."</strong> ".$value."<br/>";
+    }
+    echo "========================================================<br/>";
 }
 
-$result = $conn->query("SELECT * FROM tb_usuarios ORDER BY deslogin");
-
-$data = array();
-
-while ($row = $result->fetch_array(MYSQLI_ASSOC)) { //se eu olhar pro banco e tiver resultado, este resultado vai entrar em $row, e vai continuar ser executado o while.
-
-    //O MYSQLI_ASSOC não traz o número das colunas.
-    array_push($data, $row);
-    // var_dump($row);
-
-}
-
-echo json_encode($data);
+var_dump($results);
 ?>
