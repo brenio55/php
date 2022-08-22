@@ -1,20 +1,13 @@
-USE dbphp7;
+Para conectar ao banco de dados, precisamos de algumas restrições de segurança.
 
-CREATE TABLE tb_usuarios (
-	idusuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY, /* se usar auto-increment, têm de se haver prymary key */
-    deslogin VARCHAR(64) NOT NULL, /* des = descritive */
-    dessenha VARCHAR(256) NOT NULL,
-    dtcadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() /* o mysql só permite uma coluna timestamp por tabela */
-);
+Para usar o banco de dados por meio do PHP, a classe msqli, não existe mais. Agora usa-se duas formas:
 
-INSERT INTO tb_usuarios (deslogin, dessenha) VALUES ('root', '!@#$');
+    A classe MySQLi, e o PDO.
 
-SELECT * FROM tb_usuarios;
+ini_set('display_errors', 1); 
 
-DELETE FROM tb_usuarios WHERE idusuario = 1;
+ini_set('display_startup_errors', 1); 
 
-UPDATE tb_usuarios SET dessenha = '123456' WHERE idusuario = 1;
+error_reporting(E_ALL);
 
-TRUNCATE TABLE tb_usuarios;
-
-Anotações sobre a aula de MYSQL.
+Use estas linhas de comando quando o PHP usando o MySQL não exibir a mensagem de erro e exibir o erro 500.
