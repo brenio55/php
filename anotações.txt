@@ -1,18 +1,11 @@
-Para conectar ao banco de dados, precisamos de algumas restrições de segurança.
+SQL Server é um gerenciador de SQL, porém criado para empresas. Ele tem os mesmos recursos que o MySQL, só que é mais rápido quando comparado a mais usuários.
 
-Para usar o banco de dados por meio do PHP, a classe msqli, não existe mais. Agora usa-se duas formas:
+Existem tipos de usuário no SQL, com permissões específicas, etc.
 
-    A classe MySQLi, e o PDO.
+O padrão para o SQL SERVER é: Login: SA. Senha: root.
 
-ini_set('display_errors', 1); 
+Para trabalhar com o SQL Server, o PHP precisa de mais algumas extensões para funcionar.
 
-ini_set('display_startup_errors', 1); 
+É necessário sempre copiar novas extensões para a pasta ext da pasta php. 
 
-error_reporting(E_ALL);
-
-Use estas linhas de comando quando o PHP usando o MySQL não exibir a mensagem de erro e exibir o erro 500.
-
-PDO -> PHP DATA OBJECT
-É a forma mais recomendada para se trabalhar com PHP e Banco de Dados.
-
-PDO é bom para trabalhar com transação.
+Então, adiciona o extension=nomedoarquivo no php.ini
