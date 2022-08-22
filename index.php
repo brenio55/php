@@ -12,25 +12,19 @@ $conn = new MySQLi("localhost", "root", "", "dbphp7"); // IP; USUÁRIO; SENHA; B
 if ($conn->connect_error) {
     echo "Error: " . $conn->connect_error;
     exit;
-}else{
-    echo "Conexão bem sucedida.";
 }
 
-$stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES (?, ?)");
+$result = $conn->query("SELECT * FROM tb_usuarios ORDER BY deslogin");
 
-$login = "user";
-$pass = "12345";
+$data = array();
 
-$stmt->bind_param("ss", $login, $pass); //Espera os parâmetros das interrogações.
-                        //os SS significam que os valores são ambos string.
-                        //Estes valores precisam sempre ser passados por variáveis. Chamamos de passagem por referência.
+while ($row = $result->fetch_array(MYSQLI_ASSOC)) { //se eu olhar pro banco e tiver resultado, este resultado vai entrar em $row, e vai continuar ser executado o while.
 
-                        //Estes parâmetros não precisam ser declarados novamente, apenas o valor da variável precisar mudar e o execute do statement ser executado.
+    //O MYSQLI_ASSOC não traz o número das colunas.
+    array_push($data, $row);
+    // var_dump($row);
 
-$stmt->execute();
+}
 
-$login = "root";
-$pass = "!@#$";
-
-$stmt->execute();
+echo json_encode($data);
 ?>
