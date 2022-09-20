@@ -9,3 +9,8 @@ Para trabalhar com o SQL Server, o PHP precisa de mais algumas extensões para f
 É necessário sempre copiar novas extensões para a pasta ext da pasta php. 
 
 Então, adiciona o extension=nomedoarquivo no php.ini
+
+--> Não dá pra recuperar uma informação deletada ou atualizada, a não ser por duas maneiras:
+
+    - Fazendo backup, que é um progresso danoso, pois os dados voltados são antigos;
+    - E com transações no banco de dados.

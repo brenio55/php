@@ -9,14 +9,19 @@ error_reporting(E_ALL);
 // $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root");
 
 $conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", "");
+
+$conn->beginTransaction();
+
+
 $stmt = $conn->prepare("DELETE FROM tb_usuarios
-                        WHERE idusuario = :ID");
+                        WHERE idusuario = ?");
+$id = 2;
 
-$id = 1;
+$stmt->execute(array($id));
 
-$stmt->bindParam(":ID", $id);
+$conn->commit();
 
-$stmt->execute();
+// $conn->rollback();
 
 echo "Delete OK!";
 ?>
