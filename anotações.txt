@@ -14,3 +14,20 @@ Então, adiciona o extension=nomedoarquivo no php.ini
 
     - Fazendo backup, que é um progresso danoso, pois os dados voltados são antigos;
     - E com transações no banco de dados.
+
+-->DAO Data Access Object
+    - Juntar orientação a objetos e Banco de dados.
+
+Camadas da WEB
+
+    - 0. Banco de dados
+    - 1. PHP
+    - 2. Tela Frontal
+
+    Criação de classes para acessar o banco vai ajudar a otimização do código.
+
+    Vantagens do DAO:  
+        - Há abstração do banco no código, há apenas a classe de acesso ao banco;
+        - Segurança, pois não se dá acesso ao banco;
+
+
