@@ -1,24 +1,11 @@
 <?php 
+    $file = fopen('log.txt', 'a+'); //caminho do arquivo e nome / o que será feito com o arquivo
+    //w+ = leitura e escrita, recria o arquivo internamente
+    //a+ = apenas escreve no final do arquivo
 
-ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
-error_reporting(E_ALL);
+    //$file agora é uma resource var, uma variavel que contem o caminho de arquivo e tipo de acesso ao arquivo
+    fwrite($file, date('Y-m-d H:i:s') . "\r\n");
+    fclose($file);
 
-// $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root");
-$conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", "");
-
-$conn->beginTransaction();
-
-
-$stmt = $conn->prepare("DELETE FROM tb_usuarios
-                        WHERE idusuario = ?");
-$id = 2;
-
-$stmt->execute(array($id));
-
-$conn->commit();
-
-// $conn->rollback();
-
-echo "Delete OK!";
-?>
+    echo "Arquivo criado com sucesso";
+    ?>

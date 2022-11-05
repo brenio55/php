@@ -1,12 +1,8 @@
-<?php
+<?php 
 
-    spl_autoload_register(function ($nameclass){
-        $dirClass = "class";
-        $filename = $dirClass . DIRECTORY_SEPARATOR . $nameclass . ".php"; //é descrito tb como filepath
-
-        
-
-        if (file_exists($filename)) {
+    spl_autoload_register(function($class_name){
+        $filename = "class".DIRECTORY_SEPARATOR.$class_name.".php";
+        if (file_exists($filename)){
             require_once($filename);
         }
     });
