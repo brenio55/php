@@ -1,29 +1,15 @@
 <?php 
     require('config.php');
 
-    $filename = "usuarios.csv";
+    $filename = "logo.png";
+    $base64 = base64_encode(file_get_contents($filename));
 
-    if (file_exists($filename)){
-        $file = fopen($filename, "r");
+    $fileinfo = new finfo(FILEINFO_MIME_TYPE);
 
-        $headers = explode(",", fgets($file)); //transforma uma série de dados em uma array. Primeiro dado: separador. Segundo dado: resource.
+    $mimetype = $fileinfo->file($filename);
 
-        $data = [];
-
-        while ($row = fgets($file)){ //retornando false (vazio), o while é finalizado
-            $rowData = explode(",", $row);
-            $linha = [];
-
-            for ($i = 0; $i < count($headers); $i++){
-                $linha[$headers[$i]] = $rowData[$i];
-            }
-
-            array_push($data, $linha);
-
-        }
-
-        fclose($file);
-
-        echo json_encode($data);
-    }
+    $base64encode = "data:$mimetype;base64,".$base64;
 ?>
+<img src="<?=$base64encode?>" alt="">
+
+<a href="<?=$base64encode?>" target="_blank">Link Para Imagem</a>
