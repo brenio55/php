@@ -1,15 +1,38 @@
+<form method="POST" enctype="multipart/form-data"> <!-- //este enctype irá dizer que o conteúdo dos arquivos enviados serão em binário -->
+
+    <input type="file" name="fileUpload" id="">
+    <button type="submit">Send</button>
+
+</form>
+
+
+
 <?php 
     require('config.php');
 
-    $filename = "logo.png";
-    $base64 = base64_encode(file_get_contents($filename));
+   if ($_SERVER["REQUEST_METHOD"] === "POST"){
+        $file = $_FILES["fileUpload"]; //ESTA VARIÁVEL SUPERGLOBAL SERVE PARA OS ARQUIVOS ENVIADOS POR UPLOAD
 
-    $fileinfo = new finfo(FILEINFO_MIME_TYPE);
+        if ($file["error"]){
+            throw new Exception("Error: ".$file["error"]);
+        }
+   }
 
-    $mimetype = $fileinfo->file($filename);
+   //ao enviar arquivos, são criados diretórios temporários para os pacotes de recebimento, dentro do servidor PHP.
 
-    $base64encode = "data:$mimetype;base64,".$base64;
+   //é bom que seja um diretório a parte, pois caso seja enviado um arquivo PHP ao servidor, ele pode ser executado lá dentro, quebrando a segurança.
+
+   $dirUploads = "uploads"; 
+
+   if (!is_dir($dirUploads)){
+        mkdir($dirUploads);
+   }
+
+   if (move_uploaded_file($file["tmp_name"], $dirUploads.DIRECTORY_SEPARATOR.$file["name"])){
+    echo "Upload realizado com sucesso";
+    }else{
+        throw new Exception ("Não foi possível realizar o upload.");
+    }
+
+   
 ?>
-<img src="<?=$base64encode?>" alt="">
-
-<a href="<?=$base64encode?>" target="_blank">Link Para Imagem</a>
