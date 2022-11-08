@@ -1,0 +1,1 @@
+file get contents vai pegar o conteúdo interno de um arquivo
