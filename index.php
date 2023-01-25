@@ -1,21 +1,20 @@
-<?php 
-    require('config.php');
+<?php
+include('config.php');
 
-    $dir1 = "folder_01";
-    $dir2 = "folder_02";
+$cep = "59129696";
+$link = "https://viacep.com.br/ws/$cep/json/";
 
-    if (!is_dir($dir1)) mkdir($dir1);
-    if (!is_dir($dir2)) mkdir($dir2);
+$ch = curl_init($link);
 
-    $filename = "README.txt";
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //QUAL BIBLIOTECA, SE ESPERA RETORNO, VERFICIAR SE É VÁLIDA A OPÇÃO
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
-    if (!file_exists($dir1.DIRECTORY_SEPARATOR.$filename)){
-        $file = fopen($dir1.DIRECTORY_SEPARATOR.$filename, "w+");
-        fwrite($file, date("Y-m-d H:i:s"));
-        fclose($file);
-    }
+$response = curl_exec($ch);
 
-    
+curl_close($ch);
 
+$data = json_decode($response, true);
 
+print_r($data);
+print_r($data["localidade"])
 ?>

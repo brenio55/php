@@ -1,1 +1,1 @@
-file get contents vai pegar o conteúdo interno de um arquivo
+CURL é a maneira de que algumas APIs usam para devolver informações provindas de uma determinada URL. As informações são retornadas por meio de JSON.
