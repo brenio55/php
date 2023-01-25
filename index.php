@@ -1,9 +1,15 @@
 <?php
-
 include("config.php");
 
-if (isset($_COOKIE["NOME_DO_COOKIE"])){
-    $obj = json_decode($_COOKIE["NOME_DO_COOKIE"]);
-    echo $obj->empresa;
+try{
+    throw new Exception("Houve um erro. ", 400);
+}catch(Exception $e){
+    echo json_encode(array(
+        "message"=>$e->getMessage(),
+        "line"=>$e->getLine(),
+        "file"=>$e->getFile(),
+        "code"=>$e->getCode(),
+    ));
 }
+
 ?>
