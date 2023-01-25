@@ -1,18 +1,21 @@
 <?php 
     require('config.php');
 
+    $dir1 = "folder_01";
+    $dir2 = "folder_02";
 
-    $link = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/640px-Google_Images_2015_logo.svg.png";
-    $content = file_get_contents($link);
+    if (!is_dir($dir1)) mkdir($dir1);
+    if (!is_dir($dir2)) mkdir($dir2);
 
-    $parse = parse_url($link);
+    $filename = "README.txt";
 
-    $basename = basename($parse['path']); //retorna o nome do index numa URL.
+    if (!file_exists($dir1.DIRECTORY_SEPARATOR.$filename)){
+        $file = fopen($dir1.DIRECTORY_SEPARATOR.$filename, "w+");
+        fwrite($file, date("Y-m-d H:i:s"));
+        fclose($file);
+    }
 
-    $file = fopen($basename, "w+");
-    fwrite($file, $content);
-    fclose($file);
+    
+
 
 ?>
-
-<img src="<?=$basename?>" alt="" />
