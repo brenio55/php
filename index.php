@@ -1,27 +1,12 @@
-<?php 
+<?php
 
-ini_set('display_errors', 1); 
+include("config.php");
 
-ini_set('display_startup_errors', 1); 
+$data = array(
+    "empresa"=>"HCode Treinamentos"
+);
 
-error_reporting(E_ALL);
+setcookie("NOME_DO_COOKIE", json_encode($data), time() + 3600); //nome do cookie, variável, tempo de cookie. 3600 = 1h
 
-// $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root");
-
-$conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", "");
-
-$conn->beginTransaction();
-
-
-$stmt = $conn->prepare("DELETE FROM tb_usuarios
-                        WHERE idusuario = ?");
-$id = 2;
-
-$stmt->execute(array($id));
-
-$conn->commit();
-
-// $conn->rollback();
-
-echo "Delete OK!";
+echo "OK";
 ?>

@@ -1,16 +1,2 @@
-SQL Server é um gerenciador de SQL, porém criado para empresas. Ele tem os mesmos recursos que o MySQL, só que é mais rápido quando comparado a mais usuários.
-
-Existem tipos de usuário no SQL, com permissões específicas, etc.
-
-O padrão para o SQL SERVER é: Login: SA. Senha: root.
-
-Para trabalhar com o SQL Server, o PHP precisa de mais algumas extensões para funcionar.
-
-É necessário sempre copiar novas extensões para a pasta ext da pasta php. 
-
-Então, adiciona o extension=nomedoarquivo no php.ini
-
---> Não dá pra recuperar uma informação deletada ou atualizada, a não ser por duas maneiras:
-
-    - Fazendo backup, que é um progresso danoso, pois os dados voltados são antigos;
-    - E com transações no banco de dados.
+Cookies são arquivos físicos criados tanto no server quanto no PC do user.
+Eles servem pra salvar informações persistentes de forma mais rápida e específica para cada usuário.
